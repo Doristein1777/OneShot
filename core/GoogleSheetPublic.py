@@ -1,8 +1,8 @@
+import os
 import pandas as pd
 
-SHEET_ID = "1eJC_UnEH2xDzPqwuJP1X7KxOTgo0fMKu0oslUn9EDaU"
-SHEET_NAME = "Sheet1"
-
+SHEET_ID=os.environ.get("SHEET_ID")
+SHEET_NAME=os.environ.get("SHEET_NAME")
 
 def fetch_data():
     url = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/gviz/tq?tqx=out:csv&sheet={SHEET_NAME}"
